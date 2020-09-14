@@ -1,0 +1,43 @@
+.fld {
+  height: 63px;
+  padding-left: 19px;
+  padding-right: 19px;
+  padding-bottom: 3px;
+
+  border: 2px solid $gray4;
+
+  font-size: 18px;
+  line-height: 30px;
+  color: $dark;
+
+  border-radius: 3px;
+
+  &:hover {
+    border-color: $dark;
+
+    outline: none;
+  }
+
+  &:focus {
+    border-color: $pink;
+
+    outline: none;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .fld--half-rect {
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+  }
+}
+
+/* webkit: Safary, Chrome, Opera */
+.fld::-webkit-input-placeholder {
+  color: $dark;
+}
+
+/* Firefox 19+ */
+.fld::-moz-placeholder {
+  opacity: 1;
+}

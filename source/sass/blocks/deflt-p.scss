@@ -1,0 +1,36 @@
+.deflt-p {
+  font-size: 14px;
+}
+
+@media (max-width: $max-mobl-width) {
+  .deflt-p {
+    width: 280px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .deflt-p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .deflt-p {
+    &--midl-width {
+      width: 490px;
+    }
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .deflt-p {
+    &--midl-width {
+      width: 756px;
+    }
+  }
+}
+
+.deflt-p--white {
+  color: $white;
+  letter-spacing: normal;
+}

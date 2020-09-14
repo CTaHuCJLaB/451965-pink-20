@@ -1,0 +1,145 @@
+.oval-btn {
+  display: block;
+  width: 280px;
+  min-height: 55px;
+  padding-top: 14px;
+  padding-bottom: 13px;
+  padding-left: 36px;
+  padding-right: 35px;
+
+  border-width: 3px;
+  border-style: solid;
+
+  border-radius: 27.5px;
+
+  &:hover {
+    outline: none;
+
+    cursor: pointer;
+  }
+
+  &:active {
+    outline: none;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .oval-btn {
+    width: 300px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .oval-btn {
+    padding-left: 29px;
+    padding-right: 28px;
+  }
+}
+
+.oval-btn--dnld {
+  border-color: $white;
+
+  &:hover {
+    background-color: $white;
+  }
+
+  &:hover .oval-btn__capt {
+    color: $pink;
+  }
+
+  &:active {
+    background-color: $white;
+  }
+
+  &:active .oval-btn__capt {
+    color: rgba($lipstick, 0.3);
+  }
+}
+
+.oval-btn--post {
+  border-color: $pink;
+
+  .oval-btn__capt {
+    color: $pink;
+  }
+
+  &:hover {
+    background-color: $pink;
+
+    .oval-btn__capt {
+      color: $white;
+    }
+  }
+
+  &:active {
+    .oval-btn__capt {
+      color: rgba($white, 0.3);
+    }
+
+    &:not(:hover) {
+      background-color: $pink;
+    }
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .oval-btn--post {
+    width: 260px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .oval-btn--post {
+    width: 183px;
+
+    .oval-btn__capt {
+      font-size: 18px;
+    }
+  }
+}
+
+.oval-btn--canc {
+  border-color: rgba($dark, 0.1);
+
+  .oval-btn__capt {
+    color: rgba($dark, 0.1);
+  }
+
+  &:hover {
+    background-color: rgba($white, 0);
+    border-color: rgba($dark, 0.3);
+
+    .oval-btn__capt {
+      color: rgba($dark, 0.3);
+    }
+  }
+
+  &:active {
+    background-color: rgba($dark, 0.3);
+    border: none;
+
+    .oval-btn__capt {
+      color: rgba($white, 0.3);
+    }
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .oval-btn--canc {
+    width: 260px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .oval-btn--canc {
+    width: 183px;
+
+    .oval-btn__capt {
+      font-size: 18px;
+    }
+  }
+}
+
+.oval-btn__capt {
+  display: block;
+}

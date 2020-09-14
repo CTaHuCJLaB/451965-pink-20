@@ -1,0 +1,23 @@
+.midl-p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.25pt;
+}
+
+@media (max-width: $max-mobl-width) {
+  .midl-p {
+    width: 280px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .midl-p {
+    font-size: 18px;
+  }
+}
+
+.midl-p--white {
+  color: $white;
+  letter-spacing: normal;
+}

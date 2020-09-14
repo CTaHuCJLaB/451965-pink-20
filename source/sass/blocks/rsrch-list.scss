@@ -1,0 +1,231 @@
+@media (min-width: $tablt-width) {
+  .rsrch-list {
+    @include make-flex();
+    @include make-flex-col();
+    min-height: inherit;
+
+    text-align: left;
+
+    overflow: hidden;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .rsrch-list {
+    width: 620px;
+    padding-top: 59px;
+    padding-right: 14px;
+    padding-bottom: 52px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .rsrch-list {
+    width: 940px;
+    padding-top: 17px;
+    padding-bottom: 67px;
+    padding-right: 48px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .rsrch-list__artcl {
+    @include make-flex();
+    @include make-algn-strt();
+    @include make-jstf-sbet();
+
+    overflow: hidden;
+  }
+
+  .rsrch-list__col {
+    @include make-flex();
+    @include make-flex-col();
+    @include make-algn-strt();
+
+    overflow: hidden;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .rsrch-list__col {
+    width: 238px;
+  }
+
+  .rsrch-list__col--rght {
+    width: 298px;
+    padding-top: 37px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .rsrch-list__col {
+    width: 298px;
+  }
+
+  .rsrch-list__col--rght {
+    width: 527px;
+    padding-top: 91px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .rsrch-list__diag {
+    position: relative;
+
+    @include make-flex();
+
+    &::before {
+      content: "";
+
+      position: absolute;
+
+      border-radius: 50%;
+
+      background-color: rgba(255, 255, 255, 0);
+    }
+
+    &::after {
+      content: "24";
+
+      position: absolute;
+
+      font-weight: 700;
+      color: $lipstick;
+    }
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .rsrch-list__diag {
+    &::before {
+      top: 55px;
+      left: 18px;
+
+      width: 202px;
+      height: 202px;
+
+      border: 13px solid $lipstick;
+    }
+
+    &::after {
+      top: 76px;
+      left: 63px;
+
+      font-size: 96px;
+      line-height: 149.5px;
+    }
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .rsrch-list__diag {
+    &::before {
+      top: 69px;
+      left: 22.5px;
+
+      width: 253px;
+      height: 253px;
+
+      border: 16px solid $lipstick;
+    }
+
+    &::after {
+      top: 95px;
+      left: 79px;
+
+      font-size: 120px;
+      line-height: 187px;
+    }
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .rsrch-list__diag-svg {
+    width: 298px;
+    height: 345px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .rsrch-list__timr-crps {
+    fill: $gray2;
+  }
+}
+
+.rsrch-list__h3 {
+  margin-top: 0;
+}
+
+@media (max-width: $max-mobl-width) {
+  .rsrch-list__h3 {
+    margin-bottom: 13px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .rsrch-list__h3 {
+    width: 169px;
+    margin-bottom: 10px;
+
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .rsrch-list__h3 {
+    width: 298px;
+    margin-bottom: 21px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $deskt-width) {
+  .rsrch-list__word {
+    display: block;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .rsrch-list__p {
+    font-weight: 400;
+    letter-spacing: 0.01px;
+
+    margin-top: 0;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .rsrch-list__p {
+    width: 298px;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .rsrch-list__p {
+    width: 527px;
+    margin-bottom: 30px;
+
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .rsrch-list__span {
+    display: block;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .rsrch-list__str {
+    display: block;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .rsrch-list__link-list {
+    @include rset-list();
+  }
+}

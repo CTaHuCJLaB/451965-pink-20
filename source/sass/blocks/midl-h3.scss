@@ -1,0 +1,23 @@
+.midl-h3 {
+  font-size: 14px;
+  line-height: 18px;
+
+  text-transform: uppercase;
+
+  &--pink {
+    color: $pink;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .midl-h3 {
+    width: 218px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .midl-h3 {
+    padding-left: 32px;
+    padding-right: 31px;
+  }
+}

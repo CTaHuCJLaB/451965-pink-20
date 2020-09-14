@@ -1,0 +1,108 @@
+@mixin visly-hiddn() {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin no-outln() {
+  outline: none;
+  background: transparent;
+
+  &::before {
+    display: none;
+  }
+}
+
+@mixin rset-list() {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  list-style: none;
+}
+
+@mixin rset-btn() {
+  padding-left: 0;
+  padding-right: 0;
+
+  border: none;
+  cursor: pointer;
+}
+
+@mixin make-cntr() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin make-flex() {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin make-flex-col() {
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-items: flex-start;
+}
+
+@mixin make-algn-cntr() {
+  align-content: center;
+  align-items: center;
+}
+
+@mixin make-algn-strc() {
+  align-content: stretch;
+  align-items: stretch;
+}
+
+@mixin make-algn-strt() {
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin make-algn-end() {
+  align-content: flex-end;
+  align-items: flex-end;
+}
+
+@mixin make-jstf-strt() {
+  justify-content: flex-start;
+  justify-items: flex-start;
+}
+
+@mixin make-jstf-end() {
+  justify-content: flex-end;
+  justify-items: flex-end;
+}
+
+@mixin make-jstf-sbet() {
+  justify-content: space-between;
+  justify-items: center;
+}
+
+@mixin make-jstf-arnd() {
+  justify-content: space-around;
+  justify-items: center;
+}
+
+@mixin make-jstf-cntr() {
+  justify-content: center;
+  justify-items: center;
+}
+
+@mixin make-reltv-cntr() {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,22 @@
+.rich-h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: $black;
+
+  &--dark {
+    line-height: normal;
+    color: $dark;
+  }
+
+  &--white {
+    color: $white;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .rich-h2:not(.rich-h2--dark) {
+    font-size: 21px;
+    line-height: 18px;
+  }
+}

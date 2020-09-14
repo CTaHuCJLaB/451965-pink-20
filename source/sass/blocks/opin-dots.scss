@@ -1,0 +1,28 @@
+.opin-dots {
+  @include make-flex();
+  @include make-jstf-cntr();
+  width: calc(100% + 19px);
+}
+
+@media (max-width: $max-mobl-width) {
+  .opin-dots {
+    padding-top: 18px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .opin-dots {
+    padding-top: 37px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .opin-dots {
+    display: none;
+  }
+}
+
+.opin-dots__item {
+  margin-right: 19px;
+  margin-bottom: 19px;
+}

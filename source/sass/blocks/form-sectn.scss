@@ -1,0 +1,64 @@
+.form-sectn__cntr-wrap {
+  display: grid;
+  justify-items: center;
+  min-height: inherit;
+
+  @include make-cntr();
+
+  overflow: hidden;
+}
+
+@media (max-width: $max-mobl-width) {
+  .form-sectn__cntr-wrap {
+    width: 100%;
+    padding-top: 44px;
+    padding-bottom: 16px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .form-sectn__cntr-wrap {
+    padding-top: 91px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .form-sectn__cntr-wrap {
+    width: 620px;
+    padding-bottom: 24px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .form-sectn__cntr-wrap {
+    width: 940px;
+  }
+}
+
+.form-sectn__p {
+  margin-top: 0;
+}
+
+@media (max-width: $max-mobl-width) {
+  .form-sectn__p {
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .form-sectn__p {
+    margin-bottom: 72px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .form-sectn__p {
+    margin-bottom: 71px;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .form-sectn__hint {
+    display: none;
+  }
+}

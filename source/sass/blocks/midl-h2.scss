@@ -1,0 +1,11 @@
+.midl-h2 {
+  font-size: 18px;
+  line-height: 24px;
+  color: black;
+}
+
+@media (max-width: $max-mobl-width) {
+  .midl-h2 {
+    width: 238px;
+  }
+}

@@ -1,0 +1,144 @@
+@media (max-width: $max-mobl-width) {
+  .opins {
+    min-height: 320px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .opins {
+    min-height: 299px;
+  }
+}
+
+.opins__cntr-wrap {
+  position: relative;
+
+  @include make-cntr();
+  min-height: inherit;
+
+  overflow: hidden;
+}
+
+@media (max-width: $max-mobl-width) {
+  .opins__cntr-wrap {
+    width: 280px;
+    padding-top: 42px;
+    padding-bottom: 26px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .opins__cntr-wrap {
+    width: 620px;
+    padding-top: 46px;
+    padding-bottom: 4px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .opins__cntr-wrap {
+    width: 940px;
+    padding-top: 72px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: $max-tablt-width) {
+  .opins__quots {
+    display: none;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .opins__quots {
+    display: flex;
+    width: 79px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .opins__quots-svg {
+    fill: $gray1;
+  }
+}
+
+.opins__list {
+  @include rset-list();
+
+  &--goto1 {
+    transform: translateX(0);
+  }
+
+  &--goto2 {
+    transform: translateX(-33.333%);
+  }
+
+  &--goto3 {
+    transform: translateX(-66.666%);
+  }
+
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-timing-function: easeinsine;
+}
+
+@media (max-width: $max-tablt-width) {
+  .opins__dots {
+    @include rset-list();
+  }
+}
+
+@media (max-width: $max-tablt-width) {
+  .opins__arrw {
+    display: none;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .opins__arrw {
+    position: absolute;
+    top: calc(50% - 2px);
+
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    border: none;
+
+    background: rgba(255, 255, 255, 0);
+
+    &:hover {
+      outline: none;
+
+      cursor: pointer;
+
+      .opins__svg {
+        fill-opacity: 0.6;
+      }
+    }
+
+    &:active {
+      outline: none;
+
+      .opins__svg {
+        fill-opacity: 0.1;
+      }
+    }
+
+    &--left {
+      left: 0;
+    }
+
+    &--rght {
+      right: 0;
+    }
+  }
+
+  .opins__svg {
+    fill: $dark;
+    fill-opacity: 0.3;
+  }
+}

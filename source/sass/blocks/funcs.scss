@@ -1,0 +1,228 @@
+.funcs__cntr-wrap {
+  @include make-flex();
+  @include make-flex-col();
+  @include make-algn-cntr();
+  @include make-cntr();
+}
+
+@media (max-width: $max-mobl-width) {
+  .funcs__cntr-wrap {
+    width: 280px;
+    padding-top: 40px;
+    padding-bottom: 2px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .funcs__cntr-wrap {
+    width: 620px;
+    padding-top: 47px;
+    padding-bottom: 2px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .funcs__cntr-wrap {
+    width: 940px;
+    padding-top: 66px;
+    padding-bottom: 41px;
+  }
+}
+
+.funcs__h2 {
+  @include make-flex();
+  @include make-flex-col();
+  @include make-algn-cntr();
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: $max-mobl-width) {
+  .funcs__h2 {
+    width: 205px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .funcs__h2 {
+    width: 587px;
+    margin-bottom: 29px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .funcs__h2 {
+    width: 733px;
+    margin-bottom: 37px;
+  }
+}
+
+.funcs__span {
+  display: block;
+}
+
+@media (max-width: $max-mobl-width) {
+  .funcs__span {
+    margin-bottom: 29px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .funcs__span--bttm {
+    width: 334px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .funcs__span--bttm {
+    width: 417px;
+  }
+}
+
+.funcs__body {
+  @include make-flex();
+  @include make-flex-col();
+
+  background-color: $gray;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-image: url("../img/bg-triangle-white.svg");
+}
+
+/* Chrome, Edge, Safary, Firefox */
+@supports (display: -webkit-flex) {
+  .funcs__body {
+    background-image: linear-gradient(to bottom right, $white 50%, $gray calc(50% + 1px));
+  }
+}
+
+@media (max-width: 319px) {
+  /* Chrome, Edge, Safary, Firefox */
+  @supports (display: -webkit-flex) {
+    .funcs__body {
+      background-size: 100% 32px;
+    }
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .funcs__body {
+    min-height: 786px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: $max-mobl-width) {
+  /* Chrome, Edge, Safary, Firefox */
+  @supports (display: -webkit-flex) {
+    .funcs__body {
+      background-size: 100% 10vw;
+    }
+  }
+}
+
+@media (min-width: $tablt-width) {
+  /* Chrome, Edge, Safary, Firefox */
+  @supports (display: -webkit-flex) {
+    .funcs__body {
+      background-size: 100% 7.7vw;
+    }
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .funcs__body {
+    min-height: 485px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .funcs__body {
+    min-height: 573px;
+  }
+}
+
+.funcs__bkgr {
+  @include make-flex();
+  @include make-flex-col();
+  min-height: inherit;
+
+  @include make-cntr();
+
+  background-repeat: no-repeat;
+}
+
+@media (max-width: $max-mobl-width) {
+  .funcs__bkgr {
+    width: 280px;
+    padding-top: 82px;
+    padding-bottom: 288px;
+
+    background-position: center calc(100% + 42px);
+    background-size: 157px 320px;
+  }
+}
+
+@media (max-width: $max-mobl-width) and (max-resolution: $usual-dppx),
+  (max-width: $max-mobl-width) and (max-resolution: $usual-dpi) {
+  .funcs__bkgr {
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+  }
+}
+
+@media (max-width: $max-mobl-width) and (min-resolution: $retn-dppx),
+  (max-width: $max-mobl-width) and (min-resolution: $retn-dpi) {
+  .funcs__bkgr {
+    background-image: url("../img/iphone-screen-mobile@2x.png");
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .funcs__bkgr {
+    @include make-algn-end();
+    width: 620px;
+    padding-top: 74px;
+    padding-bottom: 9px;
+
+    background-position: left 4px;
+    background-size: 268px 481px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) and (max-resolution: $usual-dppx),
+  (min-width: $tablt-width) and (max-width: $max-tablt-width) and (max-resolution: $usual-dpi) {
+  .funcs__bkgr {
+    background-image: url("../img/iphone-screen-3-tablet@1x.png");
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) and (min-resolution: $retn-dppx),
+  (min-width: $tablt-width) and (max-width: $max-tablt-width) and (min-resolution: $retn-dpi) {
+  .funcs__bkgr {
+    background-image: url("../img/iphone-screen-3-tablet@2x.png");
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .funcs__bkgr {
+    width: 940px;
+
+    background-image: none;
+  }
+}
+
+.funcs__list {
+  @include rset-list();
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .funcs__list {
+    margin-right: -3px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .funcs__list {
+    margin-top: -2px;
+  }
+}

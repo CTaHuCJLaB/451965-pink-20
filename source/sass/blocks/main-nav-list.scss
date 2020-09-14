@@ -1,0 +1,131 @@
+.main-nav-list {
+  @include make-flex();
+  width: 100%;
+
+  background-color: $dark;
+
+  overflow: hidden;
+}
+
+@media (min-width: $deskt-width) {
+  .main-nav-list {
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 703px;
+    padding-top: 20px;
+
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 4500px) {
+  .main-nav-list {
+    width: 653px;
+  }
+}
+
+.main-nav-list__item {
+  width: 100%;
+  min-height: 64px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid #000000;
+}
+
+@media (min-width: $deskt-width) {
+  .main-nav-list__item {
+    @include make-flex();
+    justify-content: center;
+    width: auto;
+    max-width: 131px;
+    min-height: auto;
+    margin-bottom: 34px;
+    margin-left: 80px;
+
+    border-top: none;
+    border-bottom: none;
+
+    &--actv {
+      position: relative;
+    }
+
+    &--actv::after {
+      content: "";
+
+      position: absolute;
+      bottom: -12px;
+      left: 1px;
+
+      width: calc(100% - 2px);
+      height: 2px;
+
+      background-color: $white;
+    }
+  }
+}
+
+@media (min-width: 4500px) {
+  .main-nav-list__item {
+    max-width: 174px;
+    margin-left: 32px;
+  }
+}
+
+.main-nav-list__item--actv .main-nav-list__link {
+  cursor: default;
+}
+
+.main-nav-list__link {
+  display: block;
+  max-width: inherit;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 14px;
+  padding-right: 15px;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover {
+    outline: none;
+  }
+}
+
+@media (max-width: $max-tablt-width) {
+  .main-nav-list__link {
+    &:hover {
+      color: $pink;
+    }
+
+    &:active {
+      color: rgba($pink, 0.3);
+    }
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .main-nav-list__link {
+    min-height: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: capitalize;
+
+    &:hover {
+      color: $pink;
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+    }
+  }
+}

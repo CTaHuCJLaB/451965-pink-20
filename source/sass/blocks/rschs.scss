@@ -1,0 +1,26 @@
+@media (max-width: $max-mobl-width) {
+  .rschs {
+    display: none;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .rschs {
+    min-height: 387px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .rschs {
+    min-height: 429px;
+
+    background-color: $gray;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .rschs__list {
+    @include make-cntr();
+    @include rset-list();
+  }
+}

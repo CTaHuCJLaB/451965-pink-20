@@ -1,0 +1,66 @@
+.dev {
+  display: grid;
+  align-items: center;
+}
+
+@media (max-width: $max-tablt-width) {
+  .dev {
+    grid-template-columns: 88px 27px;
+    gap: 15px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .dev {
+    grid-template-columns: 113px 27px;
+    gap: 13px;
+  }
+}
+
+.dev__title {
+  line-height: 18px;
+}
+
+@media (max-width: $max-mobl-width) {
+  .dev__title {
+    margin-bottom: -1px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .dev__title {
+    margin-top: -3px;
+  }
+}
+
+@media (max-width: $max-tablt-width) {
+  .dev__title {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .dev__title {
+    font-size: 18px;
+  }
+}
+
+.dev__link {
+  @include make-flex();
+
+  &:hover {
+    .dev__acadm-svg {
+      fill: $dark;
+    }
+  }
+
+  &:active {
+    .dev__acadm-svg {
+      fill-opacity: 0.3;
+    }
+  }
+}
+
+.dev__acadm-svg {
+  fill: $pink;
+}

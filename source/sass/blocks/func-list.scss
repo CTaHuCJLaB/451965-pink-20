@@ -1,0 +1,176 @@
+.func-list {
+  @include make-flex();
+}
+
+@media (max-width: $max-tablt-width) {
+  .func-list {
+    @include make-flex-col();
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .func-list {
+    width: 314px;
+
+    text-align: left;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .func-list {
+    flex-direction: row;
+
+    @include make-jstf-sbet();
+    width: 100%;
+  }
+}
+
+.func-list__item {
+  @include make-flex();
+  @include make-flex-col();
+}
+
+@media (max-width: $max-mobl-width) {
+  .func-list__item {
+    margin-bottom: 17px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .func-list__item {
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .func-list__item {
+    margin-bottom: 31px;
+  }
+}
+
+.func-list__artcl {
+  @include make-flex();
+  @include make-flex-col();
+}
+
+@media (max-width: $max-mobl-width) {
+  .func-list__artcl {
+    @include make-algn-cntr();
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .func-list__artcl {
+    width: 300px;
+    min-height: 579px;
+    padding-top: 357px;
+    padding-left: 31px;
+    padding-right: 31px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .func-list__artcl {
+    background-position: center top;
+    background-size: 292px 302px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: $deskt-width) and (max-resolution: $usual-dppx),
+  (min-width: $deskt-width) and (max-resolution: $usual-dpi) {
+  .func-list__artcl--mood {
+    background-image: url("../img/iphone-screen-1-desktop@1x.png");
+  }
+}
+
+@media (min-width: $deskt-width) and (min-resolution: $retn-dppx),
+  (min-width: $deskt-width) and (min-resolution: $retn-dpi) {
+  .func-list__artcl--mood {
+    background-image: url("../img/iphone-screen-1-desktop@2x.png");
+  }
+}
+
+@media (min-width: $deskt-width) and (max-resolution: $usual-dppx),
+  (min-width: $deskt-width) and (max-resolution: $usual-dpi) {
+  .func-list__artcl--peace {
+    background-image: url("../img/iphone-screen-2-desktop@1x.png");
+  }
+}
+
+@media (min-width: $deskt-width) and (min-resolution: $retn-dppx),
+  (min-width: $deskt-width) and (min-resolution: $retn-dpi) {
+  .func-list__artcl--peace {
+    background-image: url("../img/iphone-screen-2-desktop@2x.png");
+  }
+}
+
+@media (min-width: $deskt-width) and (max-resolution: $usual-dppx),
+  (min-width: $deskt-width) and (max-resolution: $usual-dpi) {
+  .func-list__artcl--frnds {
+    background-image: url("../img/iphone-screen-3-desktop@1x.png");
+  }
+}
+
+@media (min-width: $deskt-width) and (min-resolution: $retn-dppx),
+  (min-width: $deskt-width) and (min-resolution: $retn-dpi) {
+  .func-list__artcl--frnds {
+    background-image: url("../img/iphone-screen-3-desktop@2x.png");
+  }
+}
+
+.func-list__h3 {
+  margin-top: 0;
+}
+
+@media (max-width: $max-mobl-width) {
+  .func-list__h3 {
+    margin-bottom: 13px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .func-list__h3 {
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .func-list__h3 {
+    font-size: 30px;
+    line-height: 30px;
+
+    margin-bottom: 24px;
+  }
+}
+
+.func-list__p {
+  font-weight: 400;
+  letter-spacing: 0.01px;
+
+  margin-top: 0;
+}
+
+@media (max-width: $max-mobl-width) {
+  .func-list__p {
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .func-list__p {
+    margin-bottom: 16px;
+
+    font-size: 14px;
+  }
+
+  .func-list__span {
+    display: block;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .func-list__p {
+    line-height: 30px;
+  }
+}

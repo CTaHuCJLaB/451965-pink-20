@@ -1,0 +1,303 @@
+.tarf-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@media (max-width: $max-mobl-width) {
+  .tarf-table {
+    width: 300%;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .tarf-table {
+    width: 100%;
+  }
+}
+
+.tarf-table__th {
+  border: 2px solid $gray11;
+  border-top-color: $dark;
+  border-bottom-color: $dark;
+
+  background-color: $dark;
+
+  &:nth-child(2) {
+    border-left-color: $dark;
+  }
+
+  &:last-child {
+    border-right-color: $dark;
+  }
+
+  &--hit {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -2px;
+      left: -2px;
+    }
+
+    &::after {
+      content: "Хит";
+
+      position: absolute;
+      transform: rotate(-45deg);
+
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .tarf-table__th {
+    &--trns {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $max-mobl-width), (min-width: $deskt-width) {
+  .tarf-table__th {
+    padding-top: 14px;
+    padding-bottom: 18px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    &--hit {
+      &::before {
+
+        width: 74px;
+        height: 73px;
+
+        background-size: 74px 73px;
+        background-image: url("../img/bg-hit.svg");
+      }
+
+      &::after {
+        top: 7px;
+        left: 3px;
+
+        width: 74px;
+        height: 73px;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .tarf-table__th {
+    padding-top: 10px;
+    padding-bottom: 8px;
+
+    &--hit {
+      &::before {
+        width: 61px;
+        height: 61px;
+
+        background-size: 61px 61px;
+        background-image: url("../img/bg-hit-tablet.svg");
+      }
+    }
+
+    &::after {
+      top: -2px;
+      left: -1px;
+
+      width: 74px;
+      height: 73px;
+    }
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .tarf-table__th {
+    &--trns {
+      border-top-color: rgba($white, 0);
+      border-bottom-color: $gray11;
+      border-left-color: rgba($white, 0);
+      border-right-color: $dark;
+
+      background-color: rgba($white, 0);
+    }
+  }
+}
+
+.tarf-table__col-name {
+  display: block;
+
+  font-weight: 700;
+  line-height: 30px;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.tarf-table__price {
+  display: block;
+
+  font-weight: 300;
+  line-height: 30px;
+  color: $white;
+}
+
+@media (max-width: $max-mobl-width), (min-width: $deskt-width) {
+  .tarf-table__col-name {
+    margin-bottom: 2px;
+
+    font-size: 18px;
+  }
+
+  .tarf-table__price {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .tarf-table__col-name {
+    margin-bottom: -3px;
+
+    font-size: 16px;
+  }
+
+  .tarf-table__price {
+    font-size: 18px;
+  }
+}
+
+.tarf-table__td {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+
+  text-align: left;
+  text-transform: uppercase;
+
+  border: 2px solid $gray11;
+
+  background-color: $white;
+}
+
+@media (max-width: $max-mobl-width) {
+  .tarf-table__td {
+    width: 33.333%;
+
+    &--no-mobl {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .tarf-table__td {
+    width: 25%;
+
+    &--no-mobl {
+      padding-top: 7px;
+      padding-bottom: 8px;
+      padding-left: 14px;
+      padding-right: 14px;
+      text-transform: none;
+    }
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .tarf-table__td {
+    &--no-mobl {
+      padding-left: 23px;
+
+      font-size: 18px;
+    }
+  }
+}
+
+.tarf-table__td-insd {
+  @include make-flex();
+  @include make-jstf-sbet();
+  @include make-algn-strt();
+  padding-left: 21px;
+
+  overflow: hidden;
+}
+
+@media (max-width: $max-mobl-width) {
+  .tarf-table__td-insd {
+    padding-top: 15px;
+    padding-bottom: 14px;
+    padding-right: 19px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .tarf-table__td-insd {
+    padding-top: 7px;
+    padding-bottom: 8px;
+    padding-right: 22px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .tarf-table__td-insd {
+    padding-top: 17px;
+    padding-bottom: 15px;
+  }
+}
+
+.tarf-table__optn-name {
+  width: 131px;
+}
+
+@media (min-width: $tablt-width) {
+  .tarf-table__optn-name {
+    display: none;
+  }
+}
+
+.tarf-table__insd-col {
+  @include make-flex();
+  @include make-jstf-end();
+}
+
+@media (max-width: $max-mobl-width) {
+  .tarf-table__insd-col {
+    width: 75px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .tarf-table__insd-col {
+    @include make-jstf-cntr();
+    width: 100%;
+  }
+}
+
+.tarf-table__insd-col--yes {
+  padding-top: 6px;
+}
+
+@media (max-width: $max-mobl-width) {
+  .tarf-table__insd-col--no {
+    padding-right: 1px;
+  }
+}
+
+.tarf-table__yes-svg {
+  display: block;
+
+  fill: $green;
+}
+
+.tarf-table__no-svg {
+  display: block;
+
+  fill: $red;
+}

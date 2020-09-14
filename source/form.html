@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк. Конкурс</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensanslight.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/opensansbold.woff" as="font" type="font/woff" crossorigin>
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="sprt-cont">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <header class="page-hdr">
+      <div class="page-hdr__tint-wrap">
+        <div class="page-hdr__cntr-wrap">
+          <nav class="main-nav main-nav--nojs">
+            <div class="main-nav__top">
+              <div class="main-nav__col">
+                <a class="main-nav__logo logo logo--white" href="index.html">
+                  <span class="visually-hidden">Главная страница этого сайта</span>
+                  <svg class="logo__svg" width="146" height="40" role="img"
+                    aria-label='Адаптивный логотип приложения "Пинк":
+                      на мобильном - надпись "Пинк" заглавными латинскими буквами белого цвета,
+                      на планшете - к надписи слева добавлены очки в оправе белого цвета,
+                      на десктопе - к очкам и надписи добавлены розовые блики' focusable="false">
+                    <use class="logo__tablt-glses" xlink:href="#logo-pink-glasses-tablet"></use>
+                    <use class="logo__deskt-glses" xlink:href="#logo-pink-glasses-desktop"></use>
+                    <use class="logo__blnks" xlink:href="#logo-pink-blinks"></use>
+                    <use class="logo__captn" xlink:href="#logo-pink-caption"></use>
+                    <use class="logo__blink" xlink:href="#logo-pink-blink"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="main-nav__col main-nav__col--rght">
+                <button class="main-nav__togl" type="button" aria-label="Открыть/закрыть меню">
+                  <svg class="main-nav__burg-svg" aria-hidden="true" focusable="false" width="50" height="24">
+                    <use xlink:href="#icon-menu-burger"></use>
+                  </svg>
+                  <svg class="main-nav__cross-svg" aria-hidden="true" focusable="false" width="24" height="24">
+                    <use xlink:href="#icon-menu-cross"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <ul class="main-nav__list main-nav-list">
+              <li class="main-nav-list__item">
+                <a class="main-nav-list__link" href="index.html">Главная</a>
+              </li>
+              <li class="main-nav-list__item">
+                <a class="main-nav-list__link" href="photo.html">Фотографии</a>
+              </li>
+              <li class="main-nav-list__item main-nav-list__item--actv">
+                <div class="main-nav-list__link" tabindex="0">Конкурс</div>
+              </li>
+              <li class="main-nav-list__item">
+                <a class="main-nav-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <header class="body-hdr">
+        <div class="body-hdr__cntr-wrap">
+          <h1 class="body-hdr__h1 h1 h1--white h1--midl-width h1--thind">
+            Конкурс на самое безбашенное путешествие с Пинк
+          </h1>
+        </div>
+      </header>
+      <section class="form-sectn">
+        <div class="form-sectn__cntr-wrap">
+          <h2 class="visually-hidden">
+            Форма для для участия в конкурсе
+          </h2>
+          <p class="form-sectn__p deflt-p deflt-p--midl-width">
+            Поделитесь своей историей и получите
+            шанс выиграть ценный приз — 1000
+            миль на вашу бонусную карту!
+            <span class="form-sectn__hint">
+              Пожалуйста, заполните форму ниже:
+            </span>
+          </p>
+          <form class="form-sectn__form form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="form__flds form__flds--name">
+              <legend class="visually-hidden">ФИО</legend>
+              <div class="form__grid">
+                <label class="form__fld-lbl form__fld-lbl--left thind-h3 thind-h3--pink" for="last-name">Фамилия:</label>
+                <input class="form__fld fld" type="text" name="last-name" id="last-name" placeholder="Укажите фамилию *" autocomplete="on" required>
+                <label class="form__fld-lbl form__fld-lbl--name form__fld-lbl--left thind-h3 thind-h3--pink" for="frst-name">Имя:</label>
+                <input class="form__fld form__fld--name fld" type="text" name="frst-name" id="frst-name" placeholder="Введите ваше имя *" autocomplete="on" required>
+                <label class="form__fld-lbl form__fld-lbl--left thind-h3 thind-h3--pink" for="midl-name">Отчество:</label>
+                <input class="form__fld fld" type="text" name="midl-name" id="midl-name" placeholder="Ну и отчество тоже" autocomplete="on">
+              </div>
+            </fieldset>
+            <fieldset class="form__flds form__flds--prgrs form__flds--mobl-grey">
+              <legend class="form__legnd midl-h3 midl-h3--pink">
+                Ваши безбашенные
+                достижения в путешествии
+              </legend>
+              <div class="form__grid">
+                <input class="form__chkbox visually-hidden" type="checkbox" name="selfie" id="selfie" checked>
+                <label class="form__lbl form__lbl--slfie" for="selfie">
+                  <span class="form__chkbox-box">
+                    <svg class="form__chkbox-on-svg mark-svg" width="22" height="16" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-yes"></use>
+                    </svg>
+                  </span>
+                  <span class="form__lbl-text">Сделал селфи с акулой</span>
+                </label>
+                <input class="form__chkbox visually-hidden" type="checkbox" name="beach" id="beach" checked>
+                <label class="form__lbl form__lbl--beach" for="beach">
+                  <span class="form__chkbox-box">
+                    <svg class="form__chkbox-on-svg mark-svg" width="22" height="16" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-yes"></use>
+                    </svg>
+                  </span>
+                  <span class="form__lbl-text">Обгорел на пляже</span>
+                </label>
+                <input class="form__chkbox visually-hidden" type="checkbox" name="saw" id="saw">
+                <label class="form__lbl form__lbl--saw" for="saw">
+                  <span class="form__chkbox-box">
+                    <svg class="form__chkbox-on-svg mark-svg" width="22" height="16" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-yes"></use>
+                    </svg>
+                  </span>
+                  <span class="form__lbl-text">Видел Чака Норриса</span>
+                </label>
+                <input class="form__chkbox visually-hidden" type="checkbox" name="bought" id="bought">
+                <label class="form__lbl form__lbl--bght" for="bought">
+                  <span class="form__chkbox-box">
+                    <svg class="form__chkbox-on-svg mark-svg" width="22" height="16" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-yes"></use>
+                    </svg>
+                  </span>
+                  <span class="form__lbl-text">Накупил сувениров</span>
+                </label>
+                <input class="form__chkbox visually-hidden" type="checkbox" name="tower" id="tower" checked>
+                <label class="form__lbl form__lbl--towr" for="tower">
+                  <span class="form__chkbox-box">
+                    <svg class="form__chkbox-on-svg mark-svg" width="22" height="16" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-yes"></use>
+                    </svg>
+                  </span>
+                  <span class="form__lbl-text">Удержал башню</span>
+                </label>
+                <input class="form__chkbox visually-hidden" type="checkbox" name="hotel" id="hotel">
+                <label class="form__lbl form__lbl--hotl" for="hotel">
+                  <span class="form__chkbox-box">
+                    <svg class="form__chkbox-on-svg mark-svg" width="22" height="16" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-yes"></use>
+                    </svg>
+                  </span>
+                  <span class="form__lbl-text">Разгромил отель</span>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="form__flds form__flds--conts">
+              <legend class="form__legnd form__legnd--no-mobl midl-h3 midl-h3--pink">Контактная информация</legend>
+              <div class="form__grid">
+                <label class="form__fld-lbl form__fld-lbl--undr form__fld-lbl--tel thind-h3 thind-h3--pink" for="tel">Номер телефона</label>
+                <input class="form__fld form__fld--tel fld fld--half-rect" type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста" autocomplete="on">
+                <div class="form__svg-cont form__svg-cont--tel">
+                  <svg class="form__conts-svg" width="19" height="19" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-phone"></use>
+                  </svg>
+                </div>
+                <label class="form__fld-lbl form__fld-lbl--undr form__fld-lbl--email thind-h3 thind-h3--pink" for="email">Адрес почты</label>
+                <input class="form__fld form__fld--email fld fld--half-rect" type="email" name="email" id="email" placeholder="Введите почту *" autocomplete="on" required>
+                <div class="form__svg-cont form__svg-cont--email">
+                  <svg class="form__conts-svg" width="17" height="13" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-mail"></use>
+                  </svg>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="form__flds form__flds--app form__flds--mobl-grey">
+              <legend class="form__legnd midl-h3 midl-h3--pink">
+                С каким приложением
+                путешествовали?
+              </legend>
+              <div class="form__grid">
+                <input class="form__radio visually-hidden" type="radio" name="os" id="ios" checked>
+                <label class="form__lbl" for="ios">
+                  <span class="form__radio-box">
+                    <svg class="form__radio-on-svg" width="35" height="35" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-map-marker"></use>
+                    </svg>
+                  </span>
+                  <span class="form__lbl-text">Pink для iOS</span>
+                </label>
+                <input class="form__radio visually-hidden" type="radio" name="os" id="android">
+                <label class="form__lbl" for="android">
+                  <span class="form__radio-box">
+                    <svg class="form__radio-on-svg" width="35" height="35" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-map-marker"></use>
+                    </svg>
+                  </span>
+                  <span class="form__lbl-text">Pink на Android</span>
+                </label>
+                <input class="form__radio visually-hidden" type="radio" name="os" id="windows">
+                <label class="form__lbl" for="windows">
+                  <span class="form__radio-box">
+                    <svg class="form__radio-on-svg" width="35" height="35" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-map-marker"></use>
+                    </svg>
+                  </span>
+                  <span class="form__lbl-text">Windows Phone</span>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="form__flds form__flds--emots">
+              <legend class="form__legnd midl-h3 midl-h3--pink">Опишите свои эмоции</legend>
+              <div class="form__grid">
+                <label class="visually-hidden" for="txt">Эмоции</label>
+                <textarea class="form__fld text-area" name="txt" id="txt"
+                          placeholder="Можно прям в красках, не стесняясь в выражениях" autocomplete="on"></textarea>
+              </div>
+            </fieldset>
+            <div class="form__cntr-wrap">
+              <button class="form__btn rect-btn" type="submit">Отправить форму</button>
+              <span class="form__note thind-h3 thind-h3--no-padg">
+                <span class="form__note thind-h3 thind-h3--pink thind-h3--no-padg">
+                  *
+                </span>
+                — обязательные
+                <span class="form__deskt-note">
+                  для заполнения
+                </span>
+                поля
+              </span>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footr">
+      <div class="footr__cntr-wrap">
+        <div class="footr__col footr__col--left">
+          <a class="footr__logo logo logo--dark" href="index.html" tabindex="0">
+            <span class="visually-hidden">Главная страница этого сайта</span>
+            <svg class="logo__svg" width="146" height="40" role="img"
+              aria-label='Адаптивный логотип приложения "Пинк":
+                на мобильном - надпись "Пинк" заглавными латинскими буквами тёмно-синего цвета,
+                на планшете - к надписи слева добавлены очки в оправе розового цвета,
+                на десктопе - добавлены блики: к очкам - тёмно синие, а к надписи - розовый' focusable="false">
+              <use class="logo__tablt-glses" xlink:href="#logo-pink-glasses-tablet"></use>
+              <use class="logo__deskt-glses" xlink:href="#logo-pink-glasses-desktop"></use>
+              <use class="logo__blnks" xlink:href="#logo-pink-blinks"></use>
+              <use class="logo__captn" xlink:href="#logo-pink-caption"></use>
+              <use class="logo__blink" xlink:href="#logo-pink-blink"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footr__col footr__col--cntr">
+          <ul class="footr__list web-srcs">
+            <li class="web-srcs__item">
+              <span class="visually-hidden">Социальная сеть "Твиттэр"</span>
+              <a class="web-srcs__link" href="https://twitter.com/">
+                <svg class="web-srcs__svg web-srcs__svg--twitr" aria-hidden="true" focusable="false" width="18" height="14" role="img"
+                  aria-label='Логотип компании "Твиттэр" - птичка'>
+                  <use xlink:href="#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="web-srcs__item">
+              <a class="web-srcs__link" href="https://www.facebook.com/">
+                <span class="visually-hidden">Социальная сеть "Фэйсбук"</span>
+                <svg class="web-srcs__svg web-srcs__svg--facbk" aria-hidden="true" focusable="false" width="9" height="18" role="img"
+                  aria-label='Логотип компании "Фэйсбук" - строчная латинская буква "эф"'>
+                  <use xlink:href="#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="web-srcs__item">
+              <a class="web-srcs__link" href="https://www.youtube.com/">
+                <span class="visually-hidden">Видеохостинг "Ютуб"</span>
+                <svg class="web-srcs__svg web-srcs__svg--youtb" aria-hidden="true" focusable="false" width="15" height="13" role="img"
+                  aria-label='Логотип "Ютуб" - знак "Плэй" (равнобедренный треугольник, указывающий направо)'>
+                  <use xlink:href="#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footr__col footr__col--rght">
+          <div class="footr__dev dev">
+            <span class="dev__title">Разработано</span>
+            <a class="dev__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <span class="visually-hidden">HTML Academy</span>
+              <svg class="dev__acadm-svg" aria-hidden="true" focusable="false" width="27" height="34" role="img"
+                  aria-label='Логотип "HTML Academy" - шестиугольный щит с изображением бонета (квадратной академической шапочки)'>
+                <use xlink:href="#logo-htmlacademy"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <section class="fixed-overl visually-hidden">
+      <h2 class="visually-hidden">Сообщение об ошибке</h2>
+      <div class="fixed-overl__popup fixed-overl__popup--err popup popup--err">
+        <div class="popup__high">
+          <h2 class="popup__h2 midl-h2">
+            Что-то пошло не так!
+          </h2>
+          <p class="popup__p midl-p">
+            Проверьте поля, выделенные красным,
+            скорее всего вы забыли их заполнить
+          </p>
+        </div>
+        <div class="popup__lower">
+          <button class="popup__btn rect-btn" type="button">Ok</button>
+        </div>
+      </div>
+    </section>
+    <section class="fixed-overl visually-hidden">
+      <h2 class="visually-hidden">Уведомление об успешной отправке заявки</h2>
+      <div class="fixed-overl__popup fixed-overl__popup--ok popup popup--ok">
+        <div class="popup__high">
+          <h2 class="popup__h2 midl-h2">
+            Ваша заявка отправлена
+          </h2>
+          <p class="popup__p midl-p">
+            Спасибо за ваше участие, ваша заявка
+            уже поступила к нам. В ближайшее
+            время мы рассмотрим ее и
+            <span class="popup__str">
+              оповестим вас.
+            </span>
+          </p>
+        </div>
+        <div class="popup__lower">
+          <button class="popup__btn rect-btn" type="button">Закрыть окно</button>
+        </div>
+      </div>
+    </section>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

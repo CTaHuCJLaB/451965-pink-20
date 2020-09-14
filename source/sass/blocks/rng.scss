@@ -1,0 +1,53 @@
+.rng {
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  &:hover {
+    outline: none;
+
+    cursor: pointer;
+  }
+
+  &:active {
+    outline: none;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .rng {
+    width: 240px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .rng {
+    width: 202px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .rng {
+    width: 288px;
+  }
+}
+
+.rng__scl {
+  height: 2px;
+
+  background-color: $dark;
+}
+
+.rng__arm {
+  width: 14px;
+  height: 14px;
+  margin-top: -8px;
+  margin-bottom: -6px;
+
+  background-color: $white;
+  border-radius: 50%;
+  border: 2px solid $pink;
+
+  &:active {
+    background-color: $pink;
+  }
+}

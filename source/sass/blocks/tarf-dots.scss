@@ -1,0 +1,22 @@
+.tarf-dots {
+  @include make-flex();
+  @include make-jstf-cntr();
+  width: calc(100% + 19px);
+}
+
+@media (max-width: $max-mobl-width) {
+  .tarf-dots {
+    padding-top: 18px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .tarf-dots {
+    display: none;
+  }
+}
+
+.tarf-dots__item {
+  margin-right: 19px;
+  margin-bottom: 19px;
+}

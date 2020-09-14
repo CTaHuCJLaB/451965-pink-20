@@ -1,0 +1,87 @@
+.tarfs {
+  @include make-flex();
+  @include make-flex-col();
+
+  background-color: $gray;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-image: url("../img/bg-triangle-white.svg");
+
+  overflow: hidden;
+}
+
+@media (max-width: $max-mobl-width) {
+  .tarfs {
+    min-height: 471px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .tarfs {
+    min-height: 377px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .tarfs {
+    min-height: 537px;
+  }
+}
+
+.tarfs__cntr-wrap {
+  min-height: inherit;
+
+  @include make-cntr();
+}
+
+@media (max-width: $max-mobl-width) {
+  .tarfs__cntr-wrap {
+    width: calc(100% - 40px);
+    padding-top: 91px;
+    padding-bottom: 31px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .tarfs__cntr-wrap {
+    width: 620px;
+    padding-top: 89px;
+    padding-bottom: 68px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .tarfs__cntr-wrap {
+    width: 940px;
+    padding-top: 160px;
+    padding-bottom: 96px;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .tarfs__table {
+    transform: translateX(-33.333%);
+
+    &--goto1 {
+      transform: translateX(0);
+    }
+
+    &--goto2 {
+      transform: translateX(-33.333%);
+    }
+
+    &--goto3 {
+      transform: translateX(-66.666%);
+    }
+
+    transition-property: transform;
+    transition-duration: 0.8s;
+    transition-timing-function: easeinsine;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .tarfs__dots {
+    @include rset-list();
+  }
+}

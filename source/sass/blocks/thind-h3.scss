@@ -1,0 +1,22 @@
+.thind-h3 {
+  font-size: 14px;
+  line-height: 30px;
+
+  text-transform: uppercase;
+
+  &--pink {
+    color: $pink;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .thind-h3 {
+    padding-left: 22px;
+    padding-right: 22px;
+
+    &--no-padg {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

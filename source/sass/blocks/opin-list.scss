@@ -1,0 +1,160 @@
+.opin-list {
+  @include make-flex();
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+  justify-items: center;
+
+  @include make-algn-strt();
+}
+
+@media (max-width: $max-mobl-width) {
+  .opin-list {
+    width: calc(280px * 3);
+    padding-bottom: 18px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .opin-list {
+    width: calc(620px * 3);
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .opin-list {
+    justify-content: space-around;
+    width: calc(940px * 3);
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .opin-list__item {
+    width: 280px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .opin-list__item {
+    width: 620px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .opin-list__item {
+    width: 688px;
+  }
+}
+
+.opin-list__artcl {
+  @include make-flex();
+}
+
+.opin-list__hdr {
+  @include make-flex();
+  @include make-flex-col();
+  @include make-algn-cntr();
+  width: 100%;
+}
+
+@media (max-width: $max-mobl-width) {
+  .opin-list__hdr {
+    padding-bottom: 13px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .opin-list__hdr {
+    order: 1;
+  }
+}
+
+.opin-list__title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: $max-mobl-width) {
+  .opin-list__title {
+    width: 80%;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .opin-list__title {
+    width: 50%;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .opin-list__athr-name {
+    display: block;
+
+    margin-bottom: 2px;
+  }
+}
+
+.opin-list__athr-info {
+  display: block;
+}
+
+@media (max-width: $max-mobl-width) {
+  .opin-list__athr-info {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .opin-list__athr-info {
+    display: none;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .opin-list__athr-info {
+    display: block;
+
+    font-weight: 400;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .opin-list__athr-info {
+    font-size: 14px;
+    color: $dark;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .opin-list__athr-info {
+    font-size: 18px;
+  }
+}
+
+.opin-list__text {
+  margin-top: 0;
+}
+
+@media (max-width: $max-mobl-width) {
+  .opin-list__text {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .opin-list__text {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .opin-list__text {
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .opin-list__text {
+    margin-bottom: 36px;
+  }
+}

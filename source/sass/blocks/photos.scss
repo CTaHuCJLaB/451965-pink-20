@@ -1,0 +1,400 @@
+.photos {
+  display: grid;
+  row-gap: 20px;
+  justify-items: center;
+
+  line-height: 24px;
+}
+
+@media (max-width: $max-mobl-width) {
+  .photos {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.photos__cntr-wrap {
+  display: grid;
+  row-gap: 20px;
+
+  @include make-cntr();
+
+  .photos__item {
+    &:first-child {
+      .photos__img {
+        background-color: $gray5;
+      }
+    }
+
+    &:nth-child(2) {
+      .photos__img {
+        background-color: $brown;
+      }
+    }
+
+    &:nth-child(3) {
+      .photos__img {
+        background-color: $dark3;
+      }
+    }
+
+    &:nth-child(4) {
+      .photos__img {
+        background-color: $yellow;
+      }
+    }
+
+    &:nth-child(5) {
+      .photos__img {
+        background-color: $gray6;
+      }
+    }
+
+    &:nth-child(6) {
+      .photos__img {
+        background-color: $dark3;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .photos__cntr-wrap {
+    column-gap: 20px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .photos__cntr-wrap {
+    grid-template-columns: auto auto;
+    width: 620px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .photos__cntr-wrap {
+    grid-template-columns: auto auto auto;
+    width: 940px;
+  }
+}
+
+.photos__item {
+  &:first-child {
+    justify-self: normal;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .photos__item {
+    display: grid;
+    align-content: stretch;
+  }
+}
+
+.photos__artcl {
+  display: grid;
+
+  .photos__link {
+    display: grid;
+  }
+
+  .photos__pictr {
+    display: contents;
+  }
+}
+
+@media (max-width: 320px) {
+  .photos__artcl {
+    width: 100%;
+
+    .photos__comt {
+      min-height: 121px;
+    }
+  }
+}
+
+@media (min-width: 321px) and (max-width: $max-mobl-width) {
+  .photos__artcl {
+    width: 280px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .photos__artcl {
+    grid-template-rows: auto 1fr;
+    width: 300px;
+  }
+}
+
+.photos__artcl--wide {
+  position: relative;
+
+  width: 100%;
+
+  &::after {
+    content: "Панорама дня";
+
+    position: absolute;
+
+    display: grid;
+    align-items: center;
+    width: 140px;
+    height: 36px;
+
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 24px;
+    color: $white;
+    text-transform: uppercase;
+
+    background-color: $pink;
+  }
+
+  .photos__img {
+    background-color: $green4;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .photos__artcl--wide {
+    &::after {
+      right: calc((100% - 280px) / 2);
+    }
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .photos__artcl--wide {
+    &::after {
+      top: 57px;
+      right: calc((100% - 620px) / 2);
+    }
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .photos__artcl--wide {
+    &::after {
+      top: 54px;
+      right: calc((100% - 940px) / 2);
+    }
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .photos__artcl--wide {
+    .photos__img {
+      max-width: calc(100% + 40px);
+      width: calc(100% + 40px);
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .photos__artcl--wide {
+    grid-template-rows: 137px auto;
+
+    .photos__comt {
+      min-height: 192px;
+    }
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .photos__artcl--wide {
+    grid-template-rows: auto auto;
+
+    .photos__comt {
+      grid-template-column: auto 1fr auto;
+    }
+
+    .photos__likes {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+      padding-top: 2px;
+    }
+
+    .photos__likes-count {
+      margin-right: 16px;
+    }
+
+    .photos__heart-svg {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+    }
+
+    .photos__p {
+      grid-column: 1 / 4;
+    }
+  }
+}
+
+@media (min-width: 321px) {
+  .photos__artcl--wide {
+    .photos__comt {
+      padding-bottom: 14px;
+    }
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .photos__artcl--wide {
+    .photos__comt {
+      @include make-cntr();
+    }
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .photos__artcl--wide {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .photos__artcl--wide {
+    .photos__comt {
+      width: 620px;
+    }
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .photos__artcl--wide {
+    .photos__comt {
+      width: 940px;
+    }
+  }
+}
+
+.photos__img {
+  width: 100%;
+}
+
+.photos__comt {
+  display: grid;
+  justify-items: start;
+
+  background-color: $gray;
+}
+
+@media (max-width: 320px) {
+  .photos__comt {
+    padding-top: 17px;
+    padding-bottom: 19px;
+    padding-left: 17px;
+    padding-right: 8px;
+  }
+}
+
+@media (min-width: 321px) {
+  .photos__comt {
+    padding-top: 22px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 24px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .photos__comt {
+    grid-template-rows: auto auto 1fr auto;
+  }
+}
+
+.photos__auth {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.photos__ago {
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.photos__h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.photos__p {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  text-align: left;
+}
+
+@media (max-width: 320px) {
+  .photos__p {
+    width: 255px;
+  }
+}
+
+@media (min-width: 321px) {
+  .photos__p {
+    width: 100%;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .photos__p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .photos__str {
+    display: block;
+  }
+}
+
+.photos__likes {
+  display: grid;
+  align-items: center;
+
+  font-size: 12px;
+  color: $pink;
+}
+
+@media (max-width: $max-mobl-width) {
+  .photos__likes {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .photos__likes {
+    grid-template-columns: auto auto 1fr auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .photos__likes {
+    grid-row: 4 / 5;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .photos__heart-svg {
+    margin-right: 18px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .photos__heart-svg {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    margin-right: 0;
+  }
+}
+
+.photos__likes-world {
+  padding-top: 1px;
+  margin-right: 3px;
+
+  text-transform: uppercase;
+}

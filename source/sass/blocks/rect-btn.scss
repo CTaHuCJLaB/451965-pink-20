@@ -1,0 +1,49 @@
+.rect-btn {
+  min-height: 63px;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: $green1;
+  border-radius: 3px;
+  border: 2px solid $green1;
+
+  &:hover {
+    background-color: $green2;
+    border: 2px solid $green2;
+
+    outline: none;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+
+    background-color: $green2;
+    border: 2px solid $green2;
+
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $gray4;
+    border: 2px solid $gray4;
+
+    cursor: default;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .rect-btn {
+    width: 280px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .rect-btn {
+    width: 300px;
+  }
+}

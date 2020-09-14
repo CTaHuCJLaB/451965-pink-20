@@ -1,0 +1,186 @@
+.logo {
+  display: flex;
+
+  overflow: hidden;
+
+  &:hover {
+    outline: none;
+  }
+
+  &:hover:not(:active) {
+    .logo__captn {
+      fill: $pink;
+    }
+  }
+
+  &:active {
+    .logo__captn {
+      fill-opacity: 0.3;
+    }
+  }
+
+  &--white {
+    .logo__captn {
+      fill: $white;
+    }
+  }
+
+  &--dark {
+    .logo__captn {
+      fill: $dark;
+    }
+  }
+}
+
+@media (max-width: $max-tablt-width) {
+  .logo {
+    &--dark {
+      .logo__tablt-glses {
+        fill: $pink;
+      }
+    }
+  }
+}
+
+@media (max-width: $max-mobl-width), (min-width: $deskt-width) {
+  .logo {
+    &--white {
+      .logo__tablt-glses {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .logo {
+    &:active {
+      .logo__tablt-glses {
+        fill-opacity: 0.3;
+      }
+    }
+
+    &--white {
+      width: 74px;
+      height: 23px;
+
+      .logo__svg {
+        margin-top: -17px;
+        margin-left: -72px;
+      }
+    }
+
+    &--dark {
+      width: 147px;
+      height: 41px;
+    }
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .logo {
+    &--white {
+      width: 146px;
+    }
+
+    &--dark {
+      width: 147px;
+    }
+
+    height: 41px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .logo {
+    &:active {
+      .logo__tablt-glses {
+        fill-opacity: 0.3;
+      }
+    }
+
+    &--white {
+      .logo__tablt-glses {
+        fill: $white;
+      }
+
+      &:hover:not(:active) {
+        .logo__tablt-glses {
+          fill: $pink;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .logo {
+    .logo__blink {
+      fill: $pink;
+    }
+
+    &:hover:not(:active) {
+      .logo__deskt-glses {
+        fill: $pink;
+      }
+    }
+
+    &:active {
+      .logo__deskt-glses {
+        fill-opacity: 0.3;
+      }
+
+      .logo__blnks {
+        fill-opacity: 0.3;
+      }
+
+      .logo__blink {
+        fill-opacity: 0.3;
+      }
+    }
+
+    &--white {
+      .logo__deskt-glses {
+        fill: $white;
+      }
+
+      .logo__blnks {
+        fill: $pink;
+      }
+    }
+
+    &--dark {
+      .logo__tablt-glses {
+        display: none;
+      }
+
+      .logo__deskt-glses {
+        fill: $pink;
+      }
+
+      .logo__blnks {
+        fill: $dark;
+      }
+
+      &:hover:not(:active) {
+        .logo__blnks {
+          fill: $pink;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $max-tablt-width) {
+  .logo__deskt-glses {
+    display: none;
+  }
+
+  .logo__blnks {
+    display: none;
+  }
+
+  .logo__blink {
+    display: none;
+  }
+}

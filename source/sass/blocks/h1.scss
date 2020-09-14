@@ -1,0 +1,51 @@
+.h1 {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+
+  &--white {
+    color: $white;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .h1 {
+    &--midl-width {
+      width: 228px;
+    }
+
+    &--thind {
+      line-height: 33px;
+    }
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .h1 {
+    font-size: 40px;
+    line-height: 54px;
+
+    &--midl-width {
+      width: 474px;
+    }
+
+    &--white {
+      line-height: 120%;
+    }
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .h1 {
+    font-size: 50px;
+    line-height: 68px;
+
+    &--narrw {
+      width: 474px;
+    }
+
+    &--midl-width {
+      width: 747px;
+    }
+  }
+}

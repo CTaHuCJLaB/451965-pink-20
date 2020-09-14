@@ -1,0 +1,22 @@
+.thind-h2 {
+  line-height: 30px;
+  color: black;
+}
+
+@media (max-width: $max-mobl-width) {
+  .thind-h2 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .thind-h2 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .thind-h2 {
+    font-size: 24px;
+  }
+}

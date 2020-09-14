@@ -1,0 +1,43 @@
+@media (max-width: $max-tablt-width) {
+  .dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    border: none;
+
+    background-color: rgba($dark, 0.3);
+
+    &--actv {
+      position: relative;
+
+      overflow: visible;
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: -3px;
+        left: -3px;
+
+        width: calc(100% + 6px);
+        height: calc(100% + 6px);
+
+        border-radius: 50%;
+        border: 3px solid $dark;
+
+        background-color: $white;
+      }
+    }
+
+    &:hover {
+      outline: none;
+
+      cursor: pointer;
+    }
+
+    &:active {
+      outline: none;
+    }
+  }
+}

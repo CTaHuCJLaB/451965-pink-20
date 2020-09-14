@@ -1,0 +1,93 @@
+.post-sectn {
+  display: grid;
+}
+
+.post-sectn__hdr {
+  display: grid;
+  grid-template-rows: min-content;
+  justify-content: center;
+}
+
+@media (max-width: $max-tablt-width) {
+  .post-sectn__hdr {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .post-sectn__hdr {
+    display: grid;
+    justify-content: center;
+    min-height: 173px;
+    padding-top: 41px;
+    padding-bottom: 27px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .post-sectn__hdr {
+    min-height: 195px;
+    padding-top: 65px;
+    padding-bottom: 25px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .post-sectn__hdr {
+    width: 940px;
+    min-height: 185px;
+    padding-top: 58px;
+    padding-bottom: 49px;
+
+    @include make-cntr();
+  }
+}
+
+.post-sectn__p {
+  margin-top: 0;
+}
+
+@media (max-width: $max-mobl-width) {
+  .post-sectn__p {
+    width: 250px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .post-sectn__p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .post-sectn__p {
+    width: 440px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .post-sectn__p {
+    width: 572px;
+  }
+}
+
+.post-sectn__str {
+  display: block;
+}
+
+.post-sectn__form-cont {
+  display: grid;
+  justify-content: center;
+
+  background-color: $gray;
+}
+
+@media (min-width: $deskt-width) {
+  .post-sectn__form-cont {
+    width: 940px;
+
+    @include make-cntr();
+  }
+}

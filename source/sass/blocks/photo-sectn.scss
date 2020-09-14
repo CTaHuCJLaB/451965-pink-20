@@ -1,0 +1,78 @@
+.photo-sectn {
+  display: grid;
+}
+
+.photo-sectn__hdr {
+  display: grid;
+  grid-template-rows: min-content;
+  justify-content: center;
+}
+
+@media (max-width: $max-tablt-width) {
+  .photo-sectn__hdr {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .photo-sectn__hdr {
+    display: grid;
+    justify-content: center;
+    min-height: 184px;
+    padding-top: 44px;
+    padding-bottom: 36px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .photo-sectn__hdr {
+    min-height: 228px;
+    padding-top: 92px;
+    padding-bottom: 58px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .photo-sectn__hdr {
+    width: 940px;
+    min-height: 240px;
+    padding-top: 91px;
+    padding-bottom: 57px;
+
+    @include make-cntr();
+  }
+}
+
+.photo-sectn__p {
+  margin-top: 0;
+}
+
+@media (max-width: $max-mobl-width) {
+  .photo-sectn__p {
+    width: 250px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .photo-sectn__p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .photo-sectn__p {
+    width: 440px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .photo-sectn__p {
+    width: 572px;
+  }
+}
+
+.photo-sectn__list {
+  @include rset-list();
+}

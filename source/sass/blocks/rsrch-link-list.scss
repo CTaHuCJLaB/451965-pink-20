@@ -1,0 +1,45 @@
+@media (min-width: $tablt-width) {
+  .rsrch-link-list {
+    @include make-flex();
+    @include make-flex-col();
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+  .rsrch-link-list__link {
+    margin-top: 0;
+
+    font-weight: 400;
+    letter-spacing: 0.01px;
+    color: $lipstick;
+
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .rsrch-link-list {
+    line-height: 24px;
+  }
+
+  .rsrch-link-list__link {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .rsrch-link-list__item {
+    width: 298px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .rsrch-link-list__item {
+    width: 527px;
+  }
+
+  .rsrch-link-list__link {
+    line-height: 30px;
+  }
+}

@@ -1,0 +1,358 @@
+.dnld {
+  @include make-flex();
+  flex-direction: column;
+
+  background-color: $dark;
+  background-position-x: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+@media (max-width: $max-mobl-width) {
+  .dnld {
+    min-height: 396px;
+
+    background-position-y: -66px;
+    background-size: 320px auto;
+  }
+}
+
+@media (max-width: 320px) and (max-resolution: $usual-dppx),
+  (max-width: 320px) and (max-resolution: $usual-dpi) {
+  .dnld {
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+  }
+}
+
+@media (max-width: 320px) and (min-resolution: $retn-dpi),
+  (max-width: 320px) and (min-resolution: $retn-dppx) {
+  .dnld {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+}
+
+@media (min-width: 321px) and (max-width: $max-tablt-width) {
+  .dnld {
+    background-size: 1200px auto;
+  }
+}
+
+@media (min-width: 321px) and (max-width: $max-tablt-width) and (max-resolution: $usual-dppx),
+  (min-width: 321px) and (max-width: $max-tablt-width) and (max-resolution: $usual-dpi) {
+  .dnld {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+  }
+}
+
+@media (min-width: 321px) and (max-width: $max-tablt-width) and (min-resolution: $retn-dppx),
+  (min-width: 321px) and (max-width: $max-tablt-width) and (min-resolution: $retn-dpi) {
+  .dnld {
+    background-image: url("../img/bg-back-tablet@2x.jpg");
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .dnld {
+    min-height: 619px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .dnld {
+    background-position-y: -110px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .dnld {
+    min-height: 743px;
+
+    background-size: 2560px auto;
+  }
+}
+
+@media (min-width: $deskt-width) and (max-resolution: $usual-dppx),
+  (min-width: $deskt-width) and (max-resolution: $usual-dpi) {
+  .dnld {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+  }
+}
+
+@media (min-width: $deskt-width) and (min-resolution: $retn-dppx),
+  (min-width: $deskt-width) and (min-resolution: $retn-dpi) {
+  .dnld {
+    background-image: url("../img/bg-back-desktop@2x.jpg");
+  }
+}
+
+@media (min-width: 2561px) {
+  .dnld {
+    background-size: 5120px auto;
+    background-image: url("../img/bg-back-desktop@2x.jpg");
+  }
+}
+
+@media (min-width: 5121px) {
+  .dnld {
+    background-size: 5400px auto;
+    background-image: url("../img/bg-back-desktop@2x.jpg");
+  }
+}
+
+.dnld__bkgr {
+  @include make-flex();
+  min-height: inherit;
+
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+@media (max-width: $max-mobl-width) {
+  .dnld__bkgr {
+    flex-direction: column;
+
+    background-size: 258px auto;
+    background-position: calc(50% - 31px) 110px;
+  }
+}
+
+@media (max-width: $max-mobl-width) and (max-resolution: $usual-dppx),
+  (max-width: $max-mobl-width) and (max-resolution: $usual-dpi) {
+  .dnld__bkgr {
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+  }
+}
+
+@media (max-width: $max-mobl-width) and (min-resolution: $retn-dpi),
+  (max-width: $max-mobl-width) and (min-resolution: $retn-dppx) {
+  .dnld__bkgr {
+    background-image: url("../img/iphone-hand-mobile@2x.png");
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .dnld__bkgr {
+    @include make-cntr();
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $deskt-width) {
+  .dnld__bkgr {
+    width: 620px;
+    padding-top: 93px;
+    padding-bottom: 110px;
+
+    background-position: 50% 74px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .dnld__bkgr {
+    background-size: 700px auto;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) and (max-resolution: $usual-dppx),
+  (min-width: $tablt-width) and (max-width: $max-tablt-width) and (max-resolution: $usual-dpi) {
+  .dnld__bkgr {
+    background-image: url("../img/iphone-hand-tablet@1x.png");
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) and (min-resolution: $retn-dppx),
+  (min-width: $tablt-width) and (max-width: $max-tablt-width) and (min-resolution: $retn-dpi) {
+  .dnld__bkgr {
+    background-image: url("../img/iphone-hand-tablet@2x.png");
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .dnld__bkgr {
+    width: 940px;
+    padding-top: 108px;
+    padding-bottom: 99px;
+
+    background-position: calc(60% + 82px) 99px;
+    background-size: 1050px auto;
+  }
+}
+
+@media (min-width: $deskt-width) and (max-resolution: $usual-dppx),
+  (min-width: $deskt-width) and (max-resolution: $usual-dpi) {
+  .dnld__bkgr {
+    background-image: url("../img/iphone-hand-desktop@1x.png");
+  }
+}
+
+@media (min-width: $deskt-width) and (min-resolution: $retn-dppx),
+  (min-width: $deskt-width) and (min-resolution: $retn-dpi) {
+  .dnld__bkgr {
+    background-image: url("../img/iphone-hand-desktop@2x.png");
+  }
+}
+
+.dnld__cont {
+  @include make-flex();
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+@media (min-width: $tablt-width) {
+  .dnld__cont {
+    width: 300px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .dnld__cont {
+    margin-left: -1px;
+  }
+}
+
+.dnld__demo {
+  @include make-flex();
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+
+  overflow: hidden;
+}
+
+@media (max-width: $max-mobl-width) {
+  .dnld__demo {
+    width: 280px;
+    min-height: 396px;
+    padding-top: 23px;
+
+    @include make-cntr();
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .dnld__demo {
+    width: inherit;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .dnld__slogn {
+    width: 225px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .dnld__slogn {
+    width: 192px;
+    margin-bottom: 31px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .dnld__slogn {
+    width: 239px;
+    margin-bottom: 52px;
+  }
+}
+
+.dnld__links {
+  @include make-flex();
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+@media (max-width: $max-mobl-width) {
+  .dnld__links {
+    padding-top: 28px;
+    padding-bottom: 30px;
+
+    background-color: $dark2;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .dnld__links {
+    width: inherit;
+  }
+}
+
+.dnld__cntr-wrap {
+  @include make-flex();
+  @include make-flex-col();
+  @include make-cntr();
+
+  overflow: hidden;
+}
+
+@media (max-width: $max-mobl-width) {
+  .dnld__cntr-wrap {
+    width: 280px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .dnld__cntr-wrap {
+    width: inherit;
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .dnld__btn {
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .dnld__btn {
+    margin-bottom: 46px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .dnld__btn {
+    margin-bottom: 67px;
+  }
+}
+
+.dnld__markts {
+  @include rset-list();
+}
+
+@media (max-width: $max-mobl-width) {
+  .dnld__markts {
+    margin-left: 4px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .dnld__markts {
+    margin-left: 14px;
+  }
+}
+
+.dnld__p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: $max-mobl-width) {
+  .dnld__p {
+    width: 231px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .dnld__p {
+    width: 295px;
+    margin-left: 3px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .dnld__p {
+    margin-top: 19px;
+  }
+}
