@@ -380,6 +380,12 @@
   }
 }
 
+.form__chkbox:focus:not(:hover) {
+  + .form__lbl {
+    outline: 2px solid $pink;
+  }
+}
+
 .form__lbl {
   &:hover {
     cursor: pointer;
@@ -471,6 +477,14 @@
   + .form__lbl {
     .form__radio-on-svg {
       display: none;
+    }
+  }
+}
+
+.form__radio:focus:not(:hover) {
+  + .form__lbl {
+    .form__radio-box {
+      outline: 2px solid $pink;
     }
   }
 }

@@ -151,6 +151,20 @@
         fill: $pink;
       }
     }
+
+    &:hover {
+      + .post-form__lbl {
+        .post-form__svg {
+          fill: rgba($dark, 0.5);
+        }
+      }
+    }
+  }
+}
+
+.post-form__rad:focus:not(:hover) {
+  + .post-form__lbl {
+    outline: 2px solid $pink;
   }
 }
 
