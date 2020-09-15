@@ -119,8 +119,8 @@ gulp.task("server", function () {
   gulp.watch("source/css/**/normalize.css", gulp.series("nrmz"));
   gulp.watch("source/sass/**/*.scss", gulp.series("css", "refresh"));
   gulp.watch("source/js/**/*.js", gulp.series("js", "refresh"));
-  //gulp.watch("source/img/**/*.{png,jpg,svg}", gulp.series("images", "refresh"));
-  //gulp.watch("source/img/**/*.{png,jpg}", gulp.series("webp", "refresh"));
+  gulp.watch("source/img/**/*.{png,jpg,svg}", gulp.series("images", "refresh"));
+  gulp.watch("source/img/**/*.{png,jpg}", gulp.series("webp", "refresh"));
   gulp.watch("source/img/{icon,logo}-*.svg", gulp.series("sprite", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   gulp.watch("source/fonts/*.{woff,woff2,otf,ttf,eot,svg}", gulp.series("copy", "refresh"));
@@ -132,8 +132,8 @@ gulp.task("build", gulp.series(
   "nrmz",
   "css",
   "js",
-  //"images",
-  //"webp",
+  "images",
+  "webp",
   "sprite",
   "html"
 ));
