@@ -180,6 +180,12 @@
   }
 }
 
+.post-form__svg {
+  &:hover {
+    fill: rgba($dark, 0.5);
+  }
+}
+
 @media (max-width: $max-mobl-width) {
   .post-form__svg {
     fill: rgba($dark, 0.3);
